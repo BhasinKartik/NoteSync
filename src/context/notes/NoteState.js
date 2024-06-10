@@ -1,7 +1,7 @@
 import NoteContext from './NoteContext';
 import {useState} from 'react'
 const NoteState=(props)=>{
-    const host= "https://backend-ns-4.onrender.com/";
+    const host= "https://backend-ns-1-01.onrender.com";
     const notesInitial=[];
 
 const [notes,setNotes]=useState(notesInitial);
@@ -15,7 +15,7 @@ const getNotes=async ()=>{
             'auth-token':localStorage.getItem('token')
         },
     });
-    // const json= await response.json();
+    const json= await response.json();
 // console.log(json);
 setNotes(json);
 }
