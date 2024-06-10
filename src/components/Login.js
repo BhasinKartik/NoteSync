@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = (props) => {
     const [credentials,setCredentials]=useState({email:"",password:""});
     let navigate = useNavigate();
-    const host= "http://localhost:5000";
+    const host= "https://backend-ns-4.onrender.com/";
     const onChange=(e)=>{
         setCredentials({...credentials,[e.target.name]:e.target.value});
             }

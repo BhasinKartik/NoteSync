@@ -1,7 +1,7 @@
 import NoteContext from './NoteContext';
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
 const NoteState=(props)=>{
-    const host= "http://localhost:5000";
+    const host= "https://backend-ns-4.onrender.com/";
     const notesInitial=[];
 
 const [notes,setNotes]=useState(notesInitial);
@@ -15,8 +15,8 @@ const getNotes=async ()=>{
             'auth-token':localStorage.getItem('token')
         },
     });
-    const json= await response.json();
-console.log(json);
+    // const json= await response.json();
+// console.log(json);
 setNotes(json);
 }
 
@@ -45,7 +45,7 @@ const deleteNote= async (id)=>{
         },
     })
 
-console.log("Deleting note with id:",id);
+// console.log("Deleting note with id:",id);
 const newNotes=notes.filter((note)=>{
     return note._id!==id;
 })

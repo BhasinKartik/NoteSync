@@ -4,7 +4,6 @@ const router=express.Router();
 const { body, validationResult } = require('express-validator');
 const bcrypt=require('bcryptjs');
 const jwt=require('jsonwebtoken');
-const JWT_SECRET="Kartikisagood$oy";
 const fetchuser=require('../middleware/fetchuser');
 router.post('/createuser', [
     body('name','Please enter a valid name').isLength({ min: 3 }),
@@ -34,7 +33,7 @@ router.post('/createuser', [
             id:user.id
         }
     }
-    const authtoken=jwt.sign(data,JWT_SECRET);
+    const authtoken=jwt.sign(data,process.env.JWT_SECRET);
     success=true;
 res.json({success,authtoken});
 }catch(err){
@@ -67,7 +66,7 @@ return res.status(400).send("Please try to login with correct credentials");
             id:user.id
         }
     }
-    const authtoken= jwt.sign(data,JWT_SECRET);
+    const authtoken= jwt.sign(data,process.env.JWT_SECRET);
     success=true;
 res.json({success,authtoken});
 }catch(error){
