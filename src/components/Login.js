@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Login = (props) => {
     const [credentials,setCredentials]=useState({email:"",password:""});
     let navigate = useNavigate();
@@ -42,6 +42,8 @@ const json=await response.json();
   </div>
   <button type="submit" className="btn btn-primary">Submit</button>
 </form>
+<h4 className="my-3">Don't have an account?</h4>
+<Link className="btn btn-success mx-2" to="/signup" role="button">Sign up</Link>
     </div>
   )
 }
