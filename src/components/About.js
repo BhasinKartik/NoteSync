@@ -1,12 +1,10 @@
 import React from 'react'
-
 const About = () => {
   return (
     <>
-    <title>About Me</title>
-    <link rel="stylesheet" href="src\styles.css"/>
-<body className="container">
-        <div class="about-section">
+    <div>
+    <title>About</title>
+        <div class="about-section my-5">
             <div class="about-image">
                 <img src="images.png" alt=""/>
             </div>
@@ -15,7 +13,6 @@ const About = () => {
                 <p>Notesync is a powerful, user-friendly app designed to keep all your personal notes organized and accessible from anywhere. Whether you are a student, a professional, or someone who loves to jot down thoughts, Notesync offers a seamless experience to manage your notes efficiently.</p>
             </div>
         </div>
-    <div class="container">
         <div class="about-section">
             <div class="about-image">
                 <img src="kartik new PP.jpg" alt=""/>
@@ -28,7 +25,6 @@ const About = () => {
             </div>
         </div>
     </div>
-</body>
 </>
   )
 }

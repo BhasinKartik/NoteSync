@@ -23,13 +23,14 @@ const json=await response.json();
         navigate('/');
     props.showAlert("Logged in successfully","success");
         console.log(json.success,json.authtoken);
-
     }
     else props.showAlert("Invalid Credentials","danger");
 }
   return (
     <div>
-        <h1>Login </h1>
+       <div className="my-4">
+         <h1>Login</h1>
+         </div>
       <form onSubmit={handleSubmit}>
   <div className="mb-3">
     <label htmlFor="email" className="htmlForm-label">Email address</label>
