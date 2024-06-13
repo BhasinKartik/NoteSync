@@ -22,12 +22,14 @@ const json=await response.json();
 if(cpassword===password){
   if(json.success){
     localStorage.setItem('token',json.authtoken);
+    localStorage.setItem('name',json.name);
+    
     // history.push("/");
     navigate('/');
     props.showAlert("Account Created successfully","success");
     console.log(json);
 }
-else props.showAlert("Invalid credentials!","danger");
+else props.showAlert("This email already exists!","danger");
 }
 else props.showAlert("Confirm your password again!","danger");
     
