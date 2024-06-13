@@ -37,7 +37,7 @@ else props.showAlert("Confirm your password again!","danger");
   return (
     <div>
        <div className="container my-3"> 
-        <h1>Create your account own NoteSync Account</h1>
+        <h1>Create your own NoteSync Account</h1>
         </div>
        <div>
       <form onSubmit={handleSignup}>
