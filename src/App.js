@@ -14,7 +14,6 @@ import Signup from './components/Signup'
 import NoteState from './context/notes/NoteState';
 import Alert from './components/Alert';
 function App() {
-  const name=Signup.
   const [alert,setAlert]=useState({})
 const showAlert=(message,type)=>{
 setAlert(
