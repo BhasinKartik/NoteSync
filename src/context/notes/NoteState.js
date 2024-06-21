@@ -17,7 +17,9 @@ const getNotes=async ()=>{
     });
     const json= await response.json();
 // console.log(json);
-setNotes(json);
+const reversedJson=json;
+reversedJson.reverse();
+setNotes(reversedJson);
 }
 
 const addNote=async (title,description,tag)=>{
@@ -32,9 +34,10 @@ const addNote=async (title,description,tag)=>{
     const json= await response.json();
 
     console.log("Adding a new Note");
-const note= json;
+    const note= json;
 //   console.log(json);
-  setNotes(notes.concat(note));
+    notes.concat(note);
+    getNotes();
 }
 const deleteNote= async (id)=>{
     const response=await fetch(`${host}/api/notes/deletenote/${id}`,{
